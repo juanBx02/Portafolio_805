@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,13 +25,28 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="bi bi-list"></i></a>
       </li>
-      
     </ul>
+    <ul class="navbar-nav ml-auto">
+            <!-- Sidebar user (optional) -->
+            <div class="user-panel pt-1" >
+              <div class="image" >
+                <img
+                  src="~/img/user8-128x128.jpg"
+                  class="img-circle"
+                  alt="User Image"
+                />
+              </div>
+            </div>
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="bi bi-box-arrow-right"></i></a>
+          </li>
+        </ul>
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary bg-info elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary bg-indigo">
     <!-- Brand Logo -->
     <a asp-area="" asp-controller="Home" asp-action="Index" class="brand-link">
       <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -47,28 +62,33 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="bi bi-building"></i>
-              <p>
-                Panel Principal
-                <i class="bi bi-chevron-compact-down"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">
                   <i class="bi bi-house-door"></i>
                   <p>Inicio</p>
                 </a>
-              </li>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="bi bi-building"></i>
+              <p>
+                Panel Principal
+                <i class="right bi bi-chevron-compact-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">
                   <i class="bi bi-shield"></i>
                   <p>Privacy</p>
                 </a>
               </li>
-              
             </ul>
+          </li>
+          <li class="nav-item">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">
+                  <i class="bi bi-people"></i>
+                  <p>Usuarios</p>
+                </a>
           </li>
         </ul>
       </nav>
