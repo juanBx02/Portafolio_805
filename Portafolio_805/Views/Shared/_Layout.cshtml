@@ -28,7 +28,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
             <!-- Sidebar user (optional) -->
-            <div class="user-panel pt-1" >
+            <div class="user-panel pt-1">
               <div class="image" >
                 <img
                   src="~/img/user8-128x128.jpg"
@@ -50,7 +50,7 @@
     <!-- Brand Logo -->
     <a asp-area="" asp-controller="Home" asp-action="Index" class="brand-link">
       <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin LTE</span>
+      <span class="brand-text font-weight-400">Administrador</span>
     </a>
 
     <!-- Sidebar -->
@@ -69,26 +69,26 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="bi bi-building"></i>
+              <i class="bi bi-people"></i>
               <p>
-                Panel Principal
+                Empleados
                 <i class="right bi bi-chevron-compact-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a asp-area="" asp-controller="Home" asp-action="ListaEmpleados" class="nav-link">
+                  <i class="bi bi-person-lines-fill"></i>
+                  <p>Lista de Empleados</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">
-                  <i class="bi bi-shield"></i>
-                  <p>Privacy</p>
+                <i class="bi bi-person-plus"></i>
+                <p>Crear Empleado</p>
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">
-                  <i class="bi bi-people"></i>
-                  <p>Usuarios</p>
-                </a>
           </li>
         </ul>
       </nav>
@@ -102,7 +102,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-1">
           <div class="col-sm-6">
             <h1>@ViewData["Title"]</h1>
           </div>
@@ -112,11 +112,7 @@
 
     <!-- Main content -->
     <section class="content ">
-
-      <!-- Default box -->
       @RenderBody()
-      <!-- /.card -->
-
     </section>
     <!-- /.content -->
   </div>
