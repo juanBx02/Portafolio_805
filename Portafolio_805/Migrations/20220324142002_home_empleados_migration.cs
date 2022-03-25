@@ -4,7 +4,7 @@
 
 namespace Portafolio_805.Migrations
 {
-    public partial class Home_Empleado_migration : Migration
+    public partial class home_empleados_migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

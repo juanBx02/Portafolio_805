@@ -25,6 +25,9 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="bi bi-list"></i></a>
       </li>
+      <li>
+          <a class="nav-link" role="button">@ViewData["Title"]</a>
+      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
             <!-- Sidebar user (optional) -->
@@ -64,14 +67,14 @@
           <li class="nav-item">
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">
                   <i class="bi bi-house-door"></i>
-                  <p>Inicio</p>
+                  <p> Inicio</p>
                 </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="bi bi-people"></i>
               <p>
-                Empleados
+                 Empleados
                 <i class="right bi bi-chevron-compact-left"></i>
               </p>
             </a>
@@ -79,13 +82,19 @@
               <li class="nav-item">
                 <a asp-area="" asp-controller="Home" asp-action="ListaEmpleados" class="nav-link">
                   <i class="bi bi-person-lines-fill"></i>
-                  <p>Lista de Empleados</p>
+                  <p> Lista de Empleados</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">
+                <a asp-area="" asp-controller="Home" asp-action="Crear" class="nav-link">
                 <i class="bi bi-person-plus"></i>
-                <p>Crear Empleado</p>
+                <p> Crear Empleado</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a asp-area="" asp-controller="Home" asp-action="Editar" class="nav-link">
+                <i class="bi bi-person-bounding-box"></i>
+                <p> Editar Empleado</p>
                 </a>
               </li>
             </ul>
@@ -99,19 +108,8 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper bg-white">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-1">
-          <div class="col-sm-6">
-            <h1>@ViewData["Title"]</h1>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
     <!-- Main content -->
-    <section class="content ">
+    <section class="content p-4">
       @RenderBody()
     </section>
     <!-- /.content -->

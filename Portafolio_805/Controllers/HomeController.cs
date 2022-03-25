@@ -33,6 +33,35 @@ namespace Portafolio_805.Controllers
             return View(await _contexto.empleados.ToListAsync());
         }
 
+        public IActionResult Crear()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Crear(Empleado empleados)
+        {
+            if (ModelState.IsValid)
+            {
+                _contexto.empleados.Add(empleados);
+                await _contexto.SaveChangesAsync();
+                return RedirectToAction("ListaEmpleados");
+            }
+
+            return View();
+        }
+
+
+        public IActionResult Editar(int id)
+        {
+            return View();
+        }
+
+        public IActionResult Eliminar(int id)
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

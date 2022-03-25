@@ -11,8 +11,8 @@ using Portafolio_805.DTO;
 namespace Portafolio_805.Migrations
 {
     [DbContext(typeof(ApplicationDB))]
-    [Migration("20220324002831_Home_Empleado_migration")]
-    partial class Home_Empleado_migration
+    [Migration("20220324142002_home_empleados_migration")]
+    partial class home_empleados_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

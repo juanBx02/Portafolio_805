@@ -1,0 +1,45 @@
+﻿@model Portafolio_805.Models.Empleado;
+@{
+    ViewData["Title"]="Crear Empleado";
+}
+
+<div class="text-center">
+    <a asp-controller="Home" asp-action="ListaEmpleados" class="btn-primary btn-sm btn mb-4 rigth">Regresar</a>
+    <div class="card">
+        <div class="card-body">
+            
+            <form method="post" asp-controller="Home" asp-action="Crear">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div class="mb-3">
+                  <label asp-for="Cedula" class="form-label">Documento de identidad</label>
+                  <input asp-for="Cedula" type="number" class="form-control" >
+                  <span asp-validation-for="Cedula" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                  <label asp-for="NombreC" class="form-label">Nombre</label>
+                  <input asp-for="NombreC" type="text" class="form-control" >
+                  <span asp-validation-for="NombreC" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                  <label asp-for="Telefono" class="form-label">Telefono</label>
+                  <input asp-for="Telefono" type="text" class="form-control" >
+                  <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                  <label asp-for="Email" class="form-label">Correo electronico</label>
+                  <input asp-for="Email" type="text" class="form-control" >
+                  <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                 <input asp-for="Estado" value="1" type="hidden" class="form-control" >
+
+                   <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Guardar registro</button>
+                   </div>
+            </form>
+        </div>
+    </div>
+</div>
